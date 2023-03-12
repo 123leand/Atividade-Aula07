@@ -10,8 +10,10 @@ public class App {
         }
         
         catch (Exception e) {
+
             System.out.println(e.getMessage());
         }
+
                 System.out.println("Execução terminada");
     }  
 }
@@ -76,6 +78,7 @@ class PessoaFisica {
     public String getCep() {
         return cep;
     }
+
     public void setCep(String cep) throws IllegalArgumentException{
         this.cep = cep;
             if(cep.length() != 8){
@@ -104,7 +107,7 @@ class PessoaFisica {
         this.idade = idade;
     }
 
-
+    
     @Override
     public int hashCode() {
         final int prime = 31;
@@ -125,43 +128,59 @@ class PessoaFisica {
     public boolean equals(Object obj) {
         if (this == obj)
             return true;
+
         if (obj == null)
             return false;
+
         if (getClass() != obj.getClass())
             return false;
+
         PessoaFisica other = (PessoaFisica) obj;
-        if (nome == null) {
+                if (nome == null) {
             if (other.nome != null)
                 return false;
+
         } else if (!nome.equals(other.nome))
             return false;
+
         if (sobreNome == null) {
             if (other.sobreNome != null)
                 return false;
+
         } else if (!sobreNome.equals(other.sobreNome))
             return false;
+
         if (genero == null) {
             if (other.genero != null)
                 return false;
+
         } else if (!genero.equals(other.genero))
             return false;
+
         if (estadoCivil == null) {
             if (other.estadoCivil != null)
                 return false;
+
         } else if (!estadoCivil.equals(other.estadoCivil))
             return false;
+
         if (cep == null) {
             if (other.cep != null)
                 return false;
+
         } else if (!cep.equals(other.cep))
             return false;
+
         if (cpf == null) {
             if (other.cpf != null)
                 return false;
+
         } else if (!cpf.equals(other.cpf))
             return false;
+
         if (idade != other.idade)
             return false;
+            
         return true;
     }
 
