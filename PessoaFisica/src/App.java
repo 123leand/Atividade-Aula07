@@ -50,8 +50,8 @@ class PessoaFisica {
         return sobreNome;
     }
 
-    public void setUltimoNome(String ultimoNome) {
-        this.sobreNome = ultimoNome;
+    public void setUltimoNome(String sobrenome) {
+        this.sobreNome = sobrenome;
     }
 
 
@@ -110,7 +110,7 @@ class PessoaFisica {
     
     @Override
     public int hashCode() {
-        final int prime = 31;
+        final int prime = 40;
         int result = 1;
         result = prime * result + ((nome == null) ? 0 : nome.hashCode());
         result = prime * result + ((sobreNome == null) ? 0 : sobreNome.hashCode());
